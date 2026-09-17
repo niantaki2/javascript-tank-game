@@ -1,0 +1,253 @@
+body {
+  background-color: #287a17;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+/* might change later */
+
+.main-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  text-align: center;
+  width: 100%;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5rem;
+  color: gray;
+  text-shadow:
+    -2px -2px 0 #041a0a,
+    2px -2px 0 #48ff00,
+    -2px 2px 0 #041a0a,
+    2px 2px 0 #48ff00;
+}
+.win-message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  text-align: center;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5rem;
+  color: gray;
+  text-shadow:
+    -2px -2px 0 #041a0a,
+    2px -2px 0 #48ff00,
+    -2px 2px 0 #041a0a,
+    2px 2px 0 #48ff00;
+  margin: 300px auto 0;
+  opacity: 0;
+}
+.lose-message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  text-align: center;
+  width: 100%;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5rem;
+  color: gray;
+  text-shadow:
+    -2px -2px 0 #041a0a,
+    2px -2px 0 #48ff00,
+    -2px 2px 0 #041a0a,
+    2px 2px 0 #48ff00;
+  margin: 300px auto 0;
+  opacity: 0;
+}
+.play-btn {
+  width: 250px;
+  height: 150px;
+  font-size: 50px;
+  font-weight: bold;
+
+  display: block;
+
+  margin: 300px auto 0;
+
+  color: white;
+  background: linear-gradient(#ff9f32, #e87900);
+
+  border: 4px solid #6b3600;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 0 #6b3600,
+    0 12px 20px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+
+  position: relative;
+  z-index: 10;
+}
+
+.play-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03);
+}
+
+.play-btn:active {
+  transform: translateY(4px);
+
+  box-shadow:
+    0 3px 0 #6b3600,
+    0 7px 12px rgba(0, 0, 0, 0.3);
+}
+
+.high-score {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 500px;
+  font-size: 50px;
+  text-align: center;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  opacity: 1;
+  text-shadow: 0 0.5px black;
+}
+
+img[alt="bush--bl"] {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  height: auto;
+}
+
+img[alt="bush--tl"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: auto;
+}
+
+img[alt="bush--tr"] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: auto;
+}
+
+img[alt="bush--br"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: auto;
+}
+
+.reset {
+  position: absolute;
+  margin-left: 1200px;
+  bottom: 90%;
+  opacity: 0;
+  display: block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  z-index: 1000;
+}
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.crate1 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 653px;
+  height: auto;
+  rotate: 90deg;
+}
+
+.crate2 {
+  position: absolute;
+  bottom: 140px;
+  left: 10px;
+  width: 653px;
+  height: auto;
+  rotate: 90deg;
+}
+.crate3 {
+  position: absolute;
+  bottom: 490px;
+  left: 1900px;
+  width: 653px;
+  height: auto;
+  rotate: 270deg;
+}
+.crate4 {
+  position: absolute;
+  bottom: 620px;
+  left: 1900px;
+  width: 653px;
+  height: auto;
+  rotate: 270deg;
+}
+
+.crate5 {
+  position: absolute;
+  bottom: -100px;
+  left: 1600px;
+  width: 690px;
+  height: auto;
+  rotate: 270deg;
+}
+.crate6 {
+  position: absolute;
+  bottom: -100px;
+  left: 600px;
+  width: 690px;
+  height: auto;
+  rotate: 90deg;
+}
+
+.crate7 {
+  position: absolute;
+  bottom: 150px;
+  left: 950px;
+  width: 700px;
+  height: 760px;
+  rotate: 90deg;
+}
+.crate,
+.crate1,
+.crate2,
+.crate3,
+.crate4,
+.crate5,
+.crate6,
+.crate7 {
+  pointer-events: none;
+}
+
+.bullet {
+  position: absolute;
+  bottom: px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  background: url("Bullet.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
